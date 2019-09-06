@@ -67,6 +67,7 @@ namespace VoluntaryPensionFundSystem
                 scommand = new SqlCommand(query, sconn);
                 password = scommand.ExecuteScalar().ToString();
                 dekodoltjelszo = DecryptData(password);
+                txFhnev.Text = dekodoltjelszo;
                 if (dekodoltjelszo == txJelszo.Text)
                 {
                     // belépés engedélyezve
@@ -95,7 +96,8 @@ namespace VoluntaryPensionFundSystem
         {
             string EntropyValue = txFhnev.Text;
             byte[] encryptedBytes = Convert.FromBase64String(encryptedText);
-            byte[] clearBytes = ProtectedData.Unprotect(encryptedBytes, Encoding.Unicode.GetBytes(EntropyValue), DataProtectionScope.LocalMachine);
+            //byte[] clearBytes = ProtectedData.Unprotect(encryptedBytes, Encoding.Unicode.GetBytes(EntropyValue), DataProtectionScope.LocalMachine);
+            byte[] clearBytes = ProtectedData.Unprotect(encryptedBytes, null, DataProtectionScope.LocalMachine);
             return Encoding.Unicode.GetString(clearBytes);
         }
     }
