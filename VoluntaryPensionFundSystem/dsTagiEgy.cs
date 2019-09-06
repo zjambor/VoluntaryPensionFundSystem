@@ -1,6 +1,8 @@
-﻿namespace VoluntaryPensionFundSystem {
-    
-    
-    public partial class dsTagiEgy {
+﻿namespace VoluntaryPensionFundSystem
+{
+
+
+    public partial class dsTagiEgy
+    {
     }
 }
