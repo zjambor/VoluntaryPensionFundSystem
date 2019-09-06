@@ -1,0 +1,1 @@
+@start "" "VoluntaryPensionFundSystem\bin\Debug\VoluntaryPensionFundSystem.exe"

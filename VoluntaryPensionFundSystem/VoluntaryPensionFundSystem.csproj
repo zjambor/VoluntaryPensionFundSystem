@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D036FA86-280B-4EEB-9443-70E6A7DCAC83}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VoluntaryPensionFundSystem</RootNamespace>
+    <AssemblyName>VoluntaryPensionFundSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalitikaHibak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalitikaHibak.Designer.cs">
+      <DependentUpon>AnalitikaHibak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Azonositas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Azonositas.Designer.cs">
+      <DependentUpon>Azonositas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankiKivonatok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankiKivonatok.Designer.cs">
+      <DependentUpon>BankiKivonatok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankiKivonKivalaszt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankiKivonKivalaszt.Designer.cs">
+      <DependentUpon>BankiKivonKivalaszt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bankszamlak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bankszamlak.Designer.cs">
+      <DependentUpon>Bankszamlak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankszamlakM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankszamlakM.Designer.cs">
+      <DependentUpon>BankszamlakM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Beazonositas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beazonositas.Designer.cs">
+      <DependentUpon>Beazonositas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BefizetesekRogz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BefizetesekRogz.Designer.cs">
+      <DependentUpon>BefizetesekRogz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BevBong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BevBong.Designer.cs">
+      <DependentUpon>BevBong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BevRogz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BevRogz.Designer.cs">
+      <DependentUpon>BevRogz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BevRogzFoglKivalasztas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BevRogzFoglKivalasztas.Designer.cs">
+      <DependentUpon>BevRogzFoglKivalasztas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BevRogzLemezes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BevRogzLemezes.Designer.cs">
+      <DependentUpon>BevRogzLemezes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BevRogzUj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BevRogzUj.Designer.cs">
+      <DependentUpon>BevRogzUj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankiKivonKivalasztB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankiKivonKivalasztB.Designer.cs">
+      <DependentUpon>BankiKivonKivalasztB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeazonFoglKivalaszt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeazonFoglKivalaszt.Designer.cs">
+      <DependentUpon>BeazonFoglKivalaszt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Felhasznalok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Felhasznalok.Designer.cs">
+      <DependentUpon>Felhasznalok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoglalkoztatoMunkaviszonyok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoglalkoztatoMunkaviszonyok.Designer.cs">
+      <DependentUpon>FoglalkoztatoMunkaviszonyok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogcimek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogcimek.Designer.cs">
+      <DependentUpon>Jogcimek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korcsoportok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korcsoportok.Designer.cs">
+      <DependentUpon>Korcsoportok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MunkSzerzodesek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MunkSzerzodesek.Designer.cs">
+      <DependentUpon>MunkSzerzodesek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nevjegy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nevjegy.Designer.cs">
+      <DependentUpon>Nevjegy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newuser.Designer.cs">
+      <DependentUpon>Newuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NypKivalaszt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NypKivalaszt.Designer.cs">
+      <DependentUpon>NypKivalaszt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartnerTorzsadatok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartnerTorzsadatok.Designer.cs">
+      <DependentUpon>PartnerTorzsadatok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kedvezmenyezettek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kedvezmenyezettek.Designer.cs">
+      <DependentUpon>Kedvezmenyezettek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TagEgyenirepKivalaszt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagEgyenirepKivalaszt.Designer.cs">
+      <DependentUpon>TagEgyenirepKivalaszt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tag_keres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tag_keres.Designer.cs">
+      <DependentUpon>Tag_keres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoglMrepKivalaszt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoglMrepKivalaszt.Designer.cs">
+      <DependentUpon>FoglMrepKivalaszt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsTagiEgy.cs">
+      <DependentUpon>dsTagiEgy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsTagiEgy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTagiEgy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Foablak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foablak.Designer.cs">
+      <DependentUpon>Foablak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoglKivalasztas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoglKivalasztas.Designer.cs">
+      <DependentUpon>FoglKivalasztas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoglUj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoglUj.Designer.cs">
+      <DependentUpon>FoglUj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fogl_keres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fogl_keres.Designer.cs">
+      <DependentUpon>Fogl_keres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fogl_munkaviszony.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fogl_munkaviszony.Designer.cs">
+      <DependentUpon>Fogl_munkaviszony.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FokonyviTetelekBong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FokonyviTetelekBong.Designer.cs">
+      <DependentUpon>FokonyviTetelekBong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GazdasagiEsemenyek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GazdasagiEsemenyek.Designer.cs">
+      <DependentUpon>GazdasagiEsemenyek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hibak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hibak.Designer.cs">
+      <DependentUpon>Hibak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idoszakok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Idoszakok.Designer.cs">
+      <DependentUpon>Idoszakok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Munkaviszony.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Munkaviszony.Designer.cs">
+      <DependentUpon>Munkaviszony.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MunkFolyoszamlaReportR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MunkFolyoszamlaReportR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MunkFolyoszamlaReportW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MunkFolyoszamlaReportW.Designer.cs">
+      <DependentUpon>MunkFolyoszamlaReportW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MunkFolyoszamlaReportIndito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MunkFolyoszamlaReportIndito.Designer.cs">
+      <DependentUpon>MunkFolyoszamlaReportIndito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nyugdijpenztarak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nyugdijpenztarak.Designer.cs">
+      <DependentUpon>Nyugdijpenztarak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Okiratok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Okiratok.Designer.cs">
+      <DependentUpon>Okiratok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OkiratokModositas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OkiratokModositas.Designer.cs">
+      <DependentUpon>OkiratokModositas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Osszevezetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Osszevezetes.Designer.cs">
+      <DependentUpon>Osszevezetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Portfoliok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Portfoliok.Designer.cs">
+      <DependentUpon>Portfoliok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunSql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunSql.Designer.cs">
+      <DependentUpon>RunSql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlScriptek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SqlScriptek.Designer.cs">
+      <DependentUpon>SqlScriptek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagiEgyeniReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TagiEgyeniReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TagiEgyeniSzamlaReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagiEgyeniSzamlaReport.Designer.cs">
+      <DependentUpon>TagiEgyeniSzamlaReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagiEgyeniSzamlaReportIndito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagiEgyeniSzamlaReportIndito.Designer.cs">
+      <DependentUpon>TagiEgyeniSzamlaReportIndito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TamogathatoKorok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TamogathatoKorok.Designer.cs">
+      <DependentUpon>TamogathatoKorok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TamogSzerz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TamogSzerz.Designer.cs">
+      <DependentUpon>TamogSzerz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TobbBevallasKivalaszt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TobbBevallasKivalaszt.Designer.cs">
+      <DependentUpon>TobbBevallasKivalaszt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UjJelszo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UjJelszo.Designer.cs">
+      <DependentUpon>UjJelszo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ujkivonat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ujkivonat.Designer.cs">
+      <DependentUpon>Ujkivonat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UjPortfolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UjPortfolio.Designer.cs">
+      <DependentUpon>UjPortfolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VPFSDataSet.cs">
+      <DependentUpon>VPFSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VPFSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VPFSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VPFSDataSetBankszla.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VPFSDataSetBankszla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zaradekolas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zaradekolas.Designer.cs">
+      <DependentUpon>Zaradekolas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZaradekolasMenubol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZaradekolasMenubol.Designer.cs">
+      <DependentUpon>ZaradekolasMenubol.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnalitikaHibak.resx">
+      <DependentUpon>AnalitikaHibak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Azonositas.resx">
+      <DependentUpon>Azonositas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankiKivonatok.resx">
+      <DependentUpon>BankiKivonatok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankiKivonKivalaszt.resx">
+      <DependentUpon>BankiKivonKivalaszt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bankszamlak.resx">
+      <DependentUpon>Bankszamlak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankszamlakM.resx">
+      <DependentUpon>BankszamlakM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Beazonositas.resx">
+      <DependentUpon>Beazonositas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BefizetesekRogz.resx">
+      <DependentUpon>BefizetesekRogz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BevBong.resx">
+      <DependentUpon>BevBong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BevRogz.resx">
+      <DependentUpon>BevRogz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BevRogzFoglKivalasztas.resx">
+      <DependentUpon>BevRogzFoglKivalasztas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BevRogzLemezes.resx">
+      <DependentUpon>BevRogzLemezes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BevRogzUj.resx">
+      <DependentUpon>BevRogzUj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankiKivonKivalasztB.resx">
+      <DependentUpon>BankiKivonKivalasztB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeazonFoglKivalaszt.resx">
+      <DependentUpon>BeazonFoglKivalaszt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Felhasznalok.resx">
+      <DependentUpon>Felhasznalok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoglalkoztatoMunkaviszonyok.resx">
+      <DependentUpon>FoglalkoztatoMunkaviszonyok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jogcimek.resx">
+      <DependentUpon>Jogcimek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korcsoportok.resx">
+      <DependentUpon>Korcsoportok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MunkSzerzodesek.resx">
+      <DependentUpon>MunkSzerzodesek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nevjegy.resx">
+      <DependentUpon>Nevjegy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newuser.resx">
+      <DependentUpon>Newuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NypKivalaszt.resx">
+      <DependentUpon>NypKivalaszt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartnerTorzsadatok.resx">
+      <DependentUpon>PartnerTorzsadatok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kedvezmenyezettek.resx">
+      <DependentUpon>Kedvezmenyezettek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagEgyenirepKivalaszt.resx">
+      <DependentUpon>TagEgyenirepKivalaszt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tag_keres.resx">
+      <DependentUpon>Tag_keres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoglMrepKivalaszt.resx">
+      <DependentUpon>FoglMrepKivalaszt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fogl_keres.resx">
+      <DependentUpon>Fogl_keres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MunkFolyoszamlaReportIndito.resx">
+      <DependentUpon>MunkFolyoszamlaReportIndito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MunkFszlaReport.rdlc" />
+    <EmbeddedResource Include="Foablak.resx">
+      <DependentUpon>Foablak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoglKivalasztas.resx">
+      <DependentUpon>FoglKivalasztas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoglUj.resx">
+      <DependentUpon>FoglUj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fogl_munkaviszony.resx">
+      <DependentUpon>Fogl_munkaviszony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FokonyviTetelekBong.resx">
+      <DependentUpon>FokonyviTetelekBong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GazdasagiEsemenyek.resx">
+      <DependentUpon>GazdasagiEsemenyek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hibak.resx">
+      <DependentUpon>Hibak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idoszakok.resx">
+      <DependentUpon>Idoszakok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Munkaviszony.resx">
+      <DependentUpon>Munkaviszony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MunkFolyoszamlaReportR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MunkFolyoszamlaReportR.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MunkFolyoszamlaReportW.resx">
+      <DependentUpon>MunkFolyoszamlaReportW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nyugdijpenztarak.resx">
+      <DependentUpon>Nyugdijpenztarak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Okiratok.resx">
+      <DependentUpon>Okiratok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OkiratokModositas.resx">
+      <DependentUpon>OkiratokModositas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Osszevezetes.resx">
+      <DependentUpon>Osszevezetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portfoliok.resx">
+      <DependentUpon>Portfoliok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TagiEgyeniReport.rdlc" />
+    <EmbeddedResource Include="RunSql.resx">
+      <DependentUpon>RunSql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlScriptek.resx">
+      <DependentUpon>SqlScriptek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagiEgyeniReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TagiEgyeniReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagiEgyeniSzamlaReport.resx">
+      <DependentUpon>TagiEgyeniSzamlaReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagiEgyeniSzamlaReportIndito.resx">
+      <DependentUpon>TagiEgyeniSzamlaReportIndito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TamogathatoKorok.resx">
+      <DependentUpon>TamogathatoKorok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TamogSzerz.resx">
+      <DependentUpon>TamogSzerz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TobbBevallasKivalaszt.resx">
+      <DependentUpon>TobbBevallasKivalaszt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UjJelszo.resx">
+      <DependentUpon>UjJelszo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ujkivonat.resx">
+      <DependentUpon>Ujkivonat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UjPortfolio.resx">
+      <DependentUpon>UjPortfolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zaradekolas.resx">
+      <DependentUpon>Zaradekolas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZaradekolasMenubol.resx">
+      <DependentUpon>ZaradekolasMenubol.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsTagiEgy.xsc">
+      <DependentUpon>dsTagiEgy.xsd</DependentUpon>
+    </None>
+    <None Include="dsTagiEgy.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTagiEgy.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsTagiEgy.xss">
+      <DependentUpon>dsTagiEgy.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VPFSDataSet.xsc">
+      <DependentUpon>VPFSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VPFSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VPFSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VPFSDataSet.xss">
+      <DependentUpon>VPFSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VPFSDataSetBankszla.xsc">
+      <DependentUpon>VPFSDataSetBankszla.xsd</DependentUpon>
+    </None>
+    <None Include="VPFSDataSetBankszla.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VPFSDataSetBankszla.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VPFSDataSetBankszla.xss">
+      <DependentUpon>VPFSDataSetBankszla.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\button_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\edit_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\viewmag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\media-floppy-3.5-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\application-exit-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\document-save-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
